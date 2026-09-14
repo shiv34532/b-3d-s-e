@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bharat 3D: Space to Earth — Fully Animated India 3D Explorer</title>
+  <meta name="description" content="Award-winning animated 3D interactive web application of India. Explore all 28 states, 8 union territories, and iconic landmarks in real-time 3D WebGL with satellite and space views.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇮🇳</text></svg>">
+  
+  <!-- CesiumJS CSS & Script -->
+  <link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Widgets/widgets.css">
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Cesium.js"></script>
+
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <!-- 3D Viewport Containers -->
+  <div id="viewport-container">
+    <!-- 1. 3D Architectural Monuments & Illuminated Cityscapes (Three.js High-Detail Engine) -->
+    <div id="city-viewport"></div>
+
+    <!-- 2. Outer Space Globe & Planetary Orbit (Three.js Space Engine) -->
+    <div id="space-viewport" style="display: none;"></div>
+
+    <!-- 3. Photorealistic Satellite 3D Globe (CesiumJS Engine) -->
+    <div id="cesium-viewport" style="display: none;"></div>
+
+    <!-- 4. Google Satellite & Street Hybrid Viewport -->
+    <div id="google-satellite-viewport" style="display: none;">
+      <iframe id="google-maps-frame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Futuristic Glassmorphic HUD Overlay Layer -->
+  <div id="hud-overlay"></div>
+
+  <!-- Application Entry Point -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
